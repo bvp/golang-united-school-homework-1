@@ -1,13 +1,14 @@
 package solution
 
 import (
-	"github.com/kyokomi/emoji"
 	"testing"
+
+	"github.com/kyokomi/emoji"
 )
 
 func TestGetMessage(t *testing.T) {
 	msg := GetMessage()
 	if msg != emoji.Sprint("Hello :world_map:!") {
-		t.Errorf("error")
+		t.Fatalf("msg is not equals %s", "Hello 🗺️!")
 	}
 }
